@@ -1,0 +1,19 @@
+.center {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    text-align: center;
+}
+.center > a {
+    text-decoration: none;
+    color: black;
+    font-size: 64px;
+    margin-left: 64px;
+    margin-right: 64px;
+}
+.center > a:visited {
+    text-decoration: none;
+    color:black
+}
