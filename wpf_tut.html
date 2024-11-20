@@ -37,4 +37,41 @@
      <p>Öffnet das Dokument apache2.conf im Editor nano</p><br>
      <li>systemctl restart apache2</li>
      <p>Starte den Server neu<br>Die Oberfläche kann über den Browser unter hostname.local/phpmyadmin erreicht werden</p>
+</ol>
+<h2>Projekt 2: Das CMS-System Bludit</h2>
+<ol> 
+ <li>sudo su</li>
+     <p>Aktiviert Root Rechte</p><br>
+ <li>cd /var/www/html</li>
+     <p>Öffnet das Verzeichnis /var/www/html</p><br>
+ <li>git clone https://github.com/jeremehancock/Bludit-Pi.git</li>
+     <p>Klont das Github Repository Bludit-Pi in das geöffnete Verzeichnis</p><br>
+ <li>cd Bludit-Pi</li>
+     <p>Öffnet das Verzeichnis Bludit-Pi</p><br>
+ <li>bash build.sh</li>
+     <p>Führt die Installation von Bludit aus</p><br>
+ <li>nano /etc/apache2/apache2.conf</li>
+     <p>Öffnet die Datei apache2.conf im Editor Nano</p><br>
+ <li>Ändere die Datei wie folgt, um htaccess zu aktivieren: <br>
 
+<p><Directory /><br>
+Options FollowSymLinks<br>
+AllowOverride All<br>
+Require all granted<br>
+</Directory ><br>
+
+<Directory /var/www/html><br>
+Options Indexes FollowSymLinks<br>
+AllowOverride All<br>
+Require all granted<br>
+</Directory ><br>
+     </p></li>
+     <p>Diese Änderung aktivieren ht access auf deinem Server</p><br>
+
+<li>systemctl restart</li>
+     <p>Starte deinen Pi neu</p>
+<li>nano apache2/sites-available/bludit.conf Verzeichnis auf /var/www/html/ ändern</li>
+     <p>Ändert das Verzeichnis des Servers auf /var/www/html</p>
+<li>systemctl restart apache2</li>
+     <p>Startet den Server neu</p>
+</ol>
