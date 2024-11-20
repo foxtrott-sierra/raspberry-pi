@@ -13,6 +13,9 @@ h2,h3,h4,h5,h6{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color:rgb(5, 253, 17);}
 
+p{
+    text-align:justify
+}
 a{
     color:rgb(5, 253, 17);;
     text-decoration: none;
