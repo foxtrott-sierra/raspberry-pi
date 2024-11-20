@@ -1,0 +1,40 @@
+<h1>WPF Informatik Projekte</h1>
+<h2>Projekt 1: Server mit Php und Maria db installieren</h2>
+<p>Server Installieren <p/>
+<ol> 
+     <li>sudo su</li>
+     <p>Aktiviert root Rechte</p><br>
+     <li>apt-get install apache2 php</li>
+     <p>Installationsbefehl für die Pakete Apache2 und die aktuellste Version von Php</p><br>
+     <li>usermod -a -G www-data <i>username</i></li>
+     <p>Fügt deinen user zur Gruppe www-data hinzu</p><br>
+     <li>chmod g+wx /var/www/html</li>
+     <p>Gibt der Gruppe des Verzeichnisses /var/www/html die Schreib und Ausführberechtigung</p><br>
+     <li>chown username:www-data /var/www/html</li>
+     <p>Ändert die Gruppe des Verzeichnisses /var/www/html zu www-data.<br>/var/www/html ist das Verzeichnis in dem die Dateien für Webseite gespeichert werden müssen</p><br>
+     <p><b>Datenbank installieren</b></p><br>
+     <li>apt-get install mariadb-server</li>
+     <p>Installationsbefehl für das Paket mariadb-server</p><br>
+     <li>mysql_secure_installation</li>
+     <p>Startet die Installation der Datenbank</p><br>
+     <li>Passwort erstellen Fragen beantworten</li> 
+     <li>mysql -u root -p </li>
+     <p>Admin Login in die Konsole der Datenbank</p><br>
+     <li>CREATE DATABASE <i>usernamedb</i>;</li>
+     <p>Erstellt eine Datenbank mit Namen Usernamedb</p><br>
+     <li>CREATE USER ‘<i>username</i>‘@’localhost’ IDENTIFIED BY ‘<i>passwort</i>‘;</li>
+     <p>Erstellt User mit Namen Username und Passwort</p><br>
+     <li>GRANT ALL PRIVILEGES ON *.* TO ‘<i>username</i>‘@’localhost’ WITH GRANT OPTION;</li>
+     <p>Vergibt alle Rechte inklusive dem Recht Rechte zu vergeben an den User Username</p><br>
+     <li>FLUSH PRIVILEGES;</li>
+     <p>Speichert die Änderungen</p><br>
+     <li>QUIT</li>
+     <p>Logout aus der Datenbank</p><br>
+     <p><b>Grafische Oberfläche</b></p><br>
+     <li>apt-get install phpmyadmin</li>
+     <p>Installationsbefehl für das Paket Php my admin</p><br>
+     <li>nano /etc/apache2/apache2.conf <br> Füge am Ende “Include /etc/phpmyadmin/apache.conf” ein</li>
+     <p>Öffnet das Dokument apache2.conf im Editor nano</p><br>
+     <li>systemctl restart apache2</li>
+     <p>Starte den Server neu<br>Die Oberfläche kann über den Browser unter hostname.local/phpmyadmin erreicht werden</p>
+
