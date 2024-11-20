@@ -15,8 +15,7 @@ h2,h3,h4,h5,h6{
 
 p{
     text-align:justify;
-    margin-left:20%;
-    margin-right:20%;
+ 
 }
 a{
     color:rgb(5, 253, 17);;
@@ -28,4 +27,7 @@ table{
     border-color: white;
     border-style: solid;
     border-width: 2px;
+   }
+tr,td{
+     margin:2%;
 }
