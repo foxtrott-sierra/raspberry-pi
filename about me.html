@@ -8,10 +8,11 @@
 <ul>
     <li>name: Finn</li>
     <li>age: 19</li>
-    <li>hobbies: climbing, coding, gaming</li>
-    <li>future career: something in IT
-    </li>
+    <li>hobbies: climbing, coding, gaming, handicrafting</li>
+    <li>future career: something in IT</li>
+    <li>I am currently studying It at Tu Wien specialized on cyber security</li>
 </ul>
+
 <img src="Pictures/Klettern.jpg">
 <div style="display: flex;justify-content:right;">
     <p>My favorite game: </p>
@@ -26,3 +27,26 @@
     <img style="padding-left: 20px;" src="Pictures/favorite movie.jpg">
 </div>
 </body>
+<script>
+// Funktion zum Erhöhen der Zahl
+function erhoeheZahl() {
+    // Element mit der Zahl auswählen (angenommen, es ist das zweite List Item)
+    const zahlElement = document.querySelector('ul li:nth-child(2)');
+    
+    if (zahlElement) {
+        // Text des List Items extrahieren und als Zahl parsen
+        let aktuelleZahl = parseInt(zahlElement.textContent);
+        
+        // Wenn der aktuelle Tag der 7. Mai ist, erhöhen wir die Zahl
+        if (new Date().getDate() === 7 && new Date().getMonth() === 5) {
+            aktuelleZahl++;
+            
+            // Neuen Wert setzen
+            zahlElement.textContent = aktuelleZahl.toString();
+        }
+    }
+}
+
+// Event Listener für das Laden der Seite
+window.addEventListener('load', erhoeheZahl);
+    </script>
