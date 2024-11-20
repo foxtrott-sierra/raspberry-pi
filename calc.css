@@ -1,0 +1,60 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.girilenrakamlarp{
+  width:94%;
+  height:90px;
+  padding-left:3%;
+  padding-right:3%;
+  color:#010101;
+  font-size:23px;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+
+.sonuclarp{
+  width:94%;
+  height:90px;
+  padding-left:3%;
+  padding-right:3%;
+  color:#8A8A8A;
+  font-size:20px;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+
+.td1{
+  width:25%;
+  height:90px;
+  background-color:#F5F5F5;
+  font-size:25px;
+  color:#00A3E5;
+}
+
+.td2{
+  width:25%;
+  height:90px;
+  background-color:#FBFBFB;
+  font-size:25px;
+  color:#212121;
+}
+
+.tdbottom{
+  width:50%;
+  height:90px;
+  background-color:#FBFBFB;
+  font-size:25px;
+  color:#212121;
+}
+
+.tdbottomright{
+  width:25%;
+  height:90px;
+  background-color:#00A3E5;
+  font-size:25px;
+  color:#F5F5F5;
+}
