@@ -66,17 +66,17 @@
      <p>Öffnet die Datei apache2.conf im Editor Nano</p><br>
  <li>Ändere die Datei wie folgt, um htaccess zu aktivieren:</li> <br>
 
-<p><Directory /><br>
+<p>&#60;Directory /&#62;<br>
 Options FollowSymLinks<br>
 AllowOverride All<br>
 Require all granted<br>
-</Directory ><br>
+&#60;/Directory &#62;<br>
 
-<Directory /var/www/html><br>
+&#60;Directory /var/www/html&#62;<br>
 Options Indexes FollowSymLinks<br>
 AllowOverride All<br>
 Require all granted<br>
-</Directory ><br>
+&#60;/Directory &#62;<br>
      </p>
      <p>Diese Änderung aktivieren ht access auf deinem Server</p><br>
 
