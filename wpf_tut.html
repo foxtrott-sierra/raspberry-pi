@@ -64,9 +64,9 @@
      <p>Führt die Installation von Bludit aus</p><br>
  <li>nano /etc/apache2/apache2.conf</li>
      <p>Öffnet die Datei apache2.conf im Editor Nano</p><br>
- <li>Ändere die Datei wie folgt, um htaccess zu aktivieren: <br>
+ <li>Ändere die Datei wie folgt, um htaccess zu aktivieren:</li> <br>
 
-<p><Directory /><br>
+<p></p><Directory /><br>
 Options FollowSymLinks<br>
 AllowOverride All<br>
 Require all granted<br>
@@ -77,7 +77,7 @@ Options Indexes FollowSymLinks<br>
 AllowOverride All<br>
 Require all granted<br>
 </Directory ><br>
-     </p></li>
+     </p>
      <p>Diese Änderung aktivieren ht access auf deinem Server</p><br>
 
 <li>systemctl restart</li>
